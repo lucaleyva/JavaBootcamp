@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class WhileLoops {
   public static void main(String[] args) {
     // int number = 25;
@@ -10,12 +12,20 @@ public class WhileLoops {
     //   System.out.println(number);
     // }; // works the same as the while loop but more effective
 
-    double choice = 0.01;
-    double guess = 0.99;
+    // double choice = 0.01;
+    // double guess = 0.99;
 
-    while (guess > choice) {
-      guess = Math.random();
-      System.out.println(guess);
+    // while (guess > choice) {
+    //   guess = Math.random();
+    //   System.out.println(guess);
+    // }
+    Scanner scan = new Scanner(System.in);
+    String password = " ";
+
+    while (!password.equals("Java")) {
+      password = scan.nextLine();
     }
+    System.out.println("Correct");
+    scan.close();
   }
 }
