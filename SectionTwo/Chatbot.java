@@ -5,8 +5,6 @@ public class Chatbot {
   
   public static void main(String[] args) {
     
-    // name
-    // hello <name>, I'm Javabot. Where are you from?
     Scanner scan = new Scanner(System.in).useLocale(Locale.ENGLISH);
 
     System.out.println("Hello, What is your name?");
