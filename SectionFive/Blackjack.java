@@ -15,6 +15,15 @@ public class Blackjack {
         int card2 = drawRandomCard();
 
         System.out.println("\n You get a \n" + cardString(card1) + "\n and a \n" + cardString(card2));
+        int total = Math.min(card1, 10) + Math.min(card2, 10);
+        System.out.println("Your total is: " + total);
+        
+        int dealerCard1 = drawRandomCard();
+        int dealerCard2 = drawRandomCard();
+        
+        System.out.println("\n Dealer shows \n" + cardString(card1) + "\n and has a facing down card   \n" + faceDown());
+        int dealerTotal = Math.min(dealerCard1, 10) + Math.min(dealerCard2, 10);
+        System.out.println("Dealer's total is hidden");
 
         // Task 5 – Print the sum of your hand value.
         //       – print: your total is: <hand value>
