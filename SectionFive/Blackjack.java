@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Blackjack {
-
     public static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -25,15 +24,9 @@ public class Blackjack {
         int dealerTotal = Math.min(dealerCard1, 10) + Math.min(dealerCard2, 10);
         System.out.println("Dealer's total is hidden");
 
-        // Task 5 – Print the sum of your hand value.
-        //       – print: your total is: <hand value>
+        String option = hitOrStay();
 
-        
-        // Task 6 – Get two random cards for the dealer.
-        //       – Print: The dealer shows \n" + <first card> + "\nand has a card facing down \n" + <facedown card>
-        //       – Print: \nThe dealer's total is hidden
-
-       
+      
         //Task 8 – Keep asking the player to hit or stay (while loop).
         //       1. Every time the player hits
         //             – draw a new card.
@@ -203,5 +196,18 @@ public class Blackjack {
      *      Please write 'hit' or 'stay'
      *   3. Returns the user's option 
      */
-    }
+
+     public static String hitOrStay() {
+         System.out.println("Would you like to hit or stay?");
+         String response = scan.nextLine();
+
+         while (!(response.equals("hit")) || response.equals("stay"))  {
+            System.out.println("Please write 'hit' or 'stay'");
+            response = scan.next();
+         }
+
+         return response;         
+     }
+
+}
 
