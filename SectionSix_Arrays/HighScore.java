@@ -7,12 +7,6 @@ public class HighScore {
         }
         int highScore = 0;
 
-         /** Task 3
-          *  
-          *   1. Using a for loop, find the highest score in the array and update the highScore.
-          *   2. println("\n\nThe highest score is: <>. Give that man a cookie!");
-
-          */
         for (int i = 0; i < scores.length; i++) {
             if(scores[i] > highScore) {
                 highScore = scores[i];
