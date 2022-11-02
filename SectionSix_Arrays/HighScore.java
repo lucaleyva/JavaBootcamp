@@ -6,13 +6,16 @@ public class HighScore {
             System.out.print(scores[i] + " ");
         }
         int highScore = 0;
+        int seat = 0;
 
         for (int i = 0; i < scores.length; i++) {
             if(scores[i] > highScore) {
                 highScore = scores[i];
+                seat = i;
             } 
         }
         System.out.println("\n\nThe highest score is: " + highScore + ". Give that champion a cookie!");
+        System.out.println("It's the winner in seat: " + seat + ". That is who has earned the right to eat this cookie!");
     }
     /** 
      * Function name – randomNumber
