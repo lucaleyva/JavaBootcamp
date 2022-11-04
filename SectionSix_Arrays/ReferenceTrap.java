@@ -13,10 +13,7 @@ public class ReferenceTrap {
     // System.out.println(Arrays.toString(staffThisYear));
 
     String[] staffLastYear = {"Tommy", "Jonny", "Ronny"};
-    String[] staffThisYear = new String[3];
-    for (int i = 0; i < staffThisYear.length; i++) {
-      staffThisYear[i] = staffLastYear[i];
-    }
+    String[] staffThisYear = Arrays.copyOf(staffLastYear, staffLastYear.length);
     
     staffThisYear[1] = "Abby";
 
