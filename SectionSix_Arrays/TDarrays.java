@@ -22,10 +22,27 @@ public class TDarrays {
                      {95, 98, 99, 100}
     };
 
+    //looping through 2D arrays
+    for (int i = 0; i < grades.length; i++) {
+      
+      switch (i) {
+        case 0: System.out.print("\tHarry: ");
+        break;
+        case 1: System.out.print("\tRon: ");
+        break;
+        case 2: System.out.print("\tHermione: ");
+        break;
+      }
 
-    System.out.println("\tHarry " + grades[0][0] + " " + grades[0][1] + " " + grades[0][2]);
-    System.out.println("\tRon " + grades[1][0] + " " + grades[1][1] + " " + grades[1][2]);
-    System.out.println("\tHermione " + grades[2][0] + " " + grades[2][1] + " " + grades[2][2]);
+      for (int j = 0; j < grades[i].length; j++){
+        System.out.print(grades[i][j] + " ");
+      }
+      System.out.println("\n");
+    }
+
+    // System.out.println("\tHarry " + grades[0][0] + " " + grades[0][1] + " " + grades[0][2]);
+    // System.out.println("\tRon " + grades[1][0] + " " + grades[1][1] + " " + grades[1][2]);
+    // System.out.println("\tHermione " + grades[2][0] + " " + grades[2][1] + " " + grades[2][2]);
      
   }
 }
