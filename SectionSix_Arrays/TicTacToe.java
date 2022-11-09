@@ -107,15 +107,12 @@ public class TicTacToe {
       return new int[] {row , element};
     }
 
-    /** Task 6 - Write a function that determines the winner
+    /** 
      * Function name - checkWin 
      * @param board (char[][])
      * @return count (int)
      * 
      * Inside the function:
-     *   1. Make a count variable that starts at 0.
-     *   2. Check every row for a straight X or straight O (Task 7).
-     *   3. Check every column for a straight X or straight O (Task 8).
      *   4. Check the left diagonal for a straight X or straight O (Task 9).
      *   5. Check the right diagonal for a straight X or straight O (Task 10).
      */
@@ -135,6 +132,22 @@ public class TicTacToe {
           count = 0;
         }
       }
+
+      for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < board.length; j++) {
+          if (board[j][i] == 'X') {
+            count++;
+          } else if (board[j][i] == 'O') {
+            count--;
+          }
+        }
+        if (count == 3 || count == -3) {
+          return count;
+        } else {
+          count = 0;
+        }
+      }
+
       return count;
     }
 
