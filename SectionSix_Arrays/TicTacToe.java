@@ -34,29 +34,11 @@ public class TicTacToe {
         } else if (count == -3) {
           System.out.println("O wins!!");
           break;
+        } else if (i == 8) {
+          System.out.println("It's a tie!!");
+          break;
         }
       }
-
-      /*
-      {  Task 3: Loop through turns.
-
-        if (X) turn {
-          Task 4: call askUser(). 
-          Task 5: populate the board using askUser's return value.
-        } else {
-          Task 4: call askUser(). 
-          Task 5: populate the board using askUser's return value. Then, print it.
-        }
-
-        Task 6 - Call the function.
-        if return value == 3 {
-          print: X wins and break the loop
-        } else if return value == -3 {
-          print: O wins and break the loop
-        }
-      } 
-      */
-
       scan.close();
   }
 
@@ -113,7 +95,9 @@ public class TicTacToe {
      * @return count (int)
      * 
      * Inside the function:
-     *   4. Check the left diagonal for a straight X or straight O (Task 9).
+     *   1. Make a count variable that starts at 0.
+     *   2. Check every row for a straight X/O  (Task 7) <-----
+     *   3. Check every column for a straight X/O  (Task 8)     *   4. Check the left diagonal for a straight X or straight O (Task 9).
      *   5. Check the right diagonal for a straight X or straight O (Task 10).
      */
     public static int checkWin(char[][] board) {
@@ -145,6 +129,15 @@ public class TicTacToe {
           return count;
         } else {
           count = 0;
+        }
+      }
+
+      for (int i = 0; i < 3; i++) {
+        int rowIndex = 2 - i;
+        if (board[rowIndex][i] == 'X') {
+          count++;
+        } else if (board[rowIndex][i] == 'O') {
+          count--;
         }
       }
 
